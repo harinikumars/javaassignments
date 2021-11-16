@@ -20,11 +20,12 @@ public class Calculator {
                 double product = multiplication();
                 System.out.println("The product for the numbers provided is: " + new BigDecimal(product).toPlainString());
             } else if (userResponse == 4) {
-                division();
+                double quotient = division();
+                System.out.println("The quotient for the dividend is " + new BigDecimal(quotient).toPlainString());
             } else {
                 System.out.println("Please enter a valid option.");
             }
-        }while(true);
+        } while (true);
 
     }
 
@@ -39,9 +40,13 @@ public class Calculator {
             System.out.println("Enter the number: ");
             addArray[i] = scanner.nextDouble();
         }
-        while (j < addArray.length) {
-            sum += addArray[j];
-            j++;
+        if (number <= 1) {
+            System.out.println("Sorry! Cannot perform the operation. Please provide atleast 2 numbers.");
+        } else {
+            while (j < addArray.length) {
+                sum += addArray[j];
+                j++;
+            }
         }
         return sum;
     }
@@ -56,39 +61,54 @@ public class Calculator {
             System.out.println("Enter the number: ");
             multArray[i] = scanner.nextDouble();
         }
-        for (int j = 0; j < multArray.length; j++) {
-            product *= multArray[j];
+        if (number <= 1) {
+            System.out.println("Sorry! Cannot perform the operation. Please provide atleast 2 numbers.");
+        } else {
+            for (int j = 0; j < multArray.length; j++) {
+                product *= multArray[j];
+            }
         }
         return product;
     }
+
 
     static double subtraction() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter how many numbers you want to subtract:");
         int number = scanner.nextInt();
         double[] subArray = new double[number];
-        double difference = 0;
         for (int i = 0; i < number; i++) {
             System.out.println("Enter the number: ");
             subArray[i] = scanner.nextDouble();
         }
-        for (int j = 0; j < subArray.length; j++) {
-            difference -= subArray[j];
+        double diff = subArray[0];
+        double difference;
+        if (number <= 1) {
+            System.out.println("Sorry! Cannot perform the operation. Please provide atleast 2 numbers.");
+        } else {
+            for (int j = 1; j < subArray.length; j++) {
+                difference = diff - subArray[j];
+                diff = difference;
+            }
         }
-        return difference;
+        return diff;
     }
 
-    static void division() {
-        Scanner scanner = new Scanner(System.in);
+
+    static double division() {
+        Scanner scanner1 = new Scanner(System.in);
         System.out.println("Enter the dividend: ");
-        double dividend = scanner.nextDouble();
+        double dividend = scanner1.nextDouble();
         System.out.println("Enter the divisor: ");
-        double divisor = scanner.nextDouble();
+        double divisor = scanner1.nextDouble();
+        double quotient = 0;
+        double remainder = 0;
         if (divisor == 0) {
             System.out.println("Sorry! The Division cannot be performed.");
         } else {
-            System.out.println("The quotient for the dividend " + new BigDecimal(dividend).toPlainString() + " and the divisor " + new BigDecimal(divisor).toPlainString() + " is " + new BigDecimal(dividend / divisor).toPlainString());
-            System.out.println("The remainder for the dividend " + new BigDecimal(dividend).toPlainString() + " and the divisor " + new BigDecimal(divisor).toPlainString() + " is " + new BigDecimal(dividend % divisor).toPlainString());
+            quotient = dividend / divisor;
+            remainder = dividend % divisor;
         }
+        return quotient;
     }
 }
