@@ -6,22 +6,26 @@ import java.util.Scanner;
 
 public class Calculator {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        String[] operationOptions = {"1 : Addition", "2 : Subtraction", "3 : Multiplication", "4 : Division"};
-        System.out.println("Enter the operation you want to perform from the list:" + Arrays.toString(operationOptions));
-        int userResponse = scanner.nextInt();
-        if (userResponse == 1) {
-            System.out.println("The sum for the numbers provided is: " + addition());
-        } else if (userResponse == 2) {
-            System.out.println("The difference for the numbers provided is: " + subtraction());
-        } else if (userResponse == 3) {
-            double product = multiplication();
-            System.out.println("The product for the numbers provided is: " + new BigDecimal(product).toPlainString());
-        } else if (userResponse == 4) {
-            division();
-        } else {
-            System.out.println("Please enter a valid option.");
-        }
+
+        do {
+            String[] operationOptions = {"1 : Addition", "2 : Subtraction", "3 : Multiplication", "4 : Division"};
+            System.out.println("Enter the operation you want to perform from the list:" + Arrays.toString(operationOptions));
+            Scanner scanner = new Scanner(System.in);
+            int userResponse = scanner.nextInt();
+            if (userResponse == 1) {
+                System.out.println("The sum for the numbers provided is: " + addition());
+            } else if (userResponse == 2) {
+                System.out.println("The difference for the numbers provided is: " + subtraction());
+            } else if (userResponse == 3) {
+                double product = multiplication();
+                System.out.println("The product for the numbers provided is: " + new BigDecimal(product).toPlainString());
+            } else if (userResponse == 4) {
+                division();
+            } else {
+                System.out.println("Please enter a valid option.");
+            }
+        }while(true);
+
     }
 
     static double addition() {
