@@ -8,7 +8,7 @@ public class Calculator {
     public static void main(String[] args) {
 
         do {
-            String[] operationOptions = {"1 : Addition", "2 : Subtraction", "3 : Multiplication", "4 : Division"};
+            String[] operationOptions = {"1 : bopractice.Addition", "2 : Subtraction", "3 : Multiplication", "4 : Division"};
             System.out.println("Enter the operation you want to perform from the list:" + Arrays.toString(operationOptions));
             Scanner scanner = new Scanner(System.in);
             int userResponse = scanner.nextInt();
