@@ -1,3 +1,5 @@
+package bopractice;
+
 public class CommerceStudents extends Student{
     public int accounts;
     public int economics;

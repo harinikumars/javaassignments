@@ -1,3 +1,5 @@
+package bopractice;
+
 class Encapsulation {
     private int a;
 

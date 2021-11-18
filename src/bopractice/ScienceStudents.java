@@ -1,3 +1,5 @@
+package bopractice;
+
 public class ScienceStudents extends Student {
     public int physics;
     public int chemistry;

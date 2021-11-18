@@ -1,4 +1,4 @@
-package assignments;
+package bopractice;
 
 public class NullPointerExceptionExample {
     public static void main(String[] args) {

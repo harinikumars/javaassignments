@@ -1,4 +1,4 @@
-package assignments;
+package bopractice;
 
 import assignments.Interfaces.Animal;
 

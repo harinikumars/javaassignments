@@ -1,3 +1,5 @@
+package bopractice;
+
 import java.util.Scanner;
 
 public class SumOfNumbers {

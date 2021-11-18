@@ -1,3 +1,5 @@
+package bopractice;
+
 public class PrintMessage {
     public static void main(String[] args){
         /* The below line is going to print my feeling */
