@@ -1,18 +1,20 @@
 package assignments.oopsassignment.abstraction;
 
+import javax.imageio.plugins.tiff.TIFFTagSet;
+
 public class AxisBank extends Bank{
 
     public static void main(String[] args) {
         AxisBank axisBank = new AxisBank();
-        name = "Axis Bank";
-        ifscCode = "a1b23243";
+        axisBank.bankName="Axis Bank";
+        axisBank.ifscCode="axb67";
         axisBank.displayBankDetails();
         axisBank.denominationListInTheBank();
     }
 
     @Override
     void displayBankDetails() {
-        System.out.println("The bank name is " +name+ " with the IFSC Code as : " +ifscCode);
+        System.out.println("The bank name is " +bankName+ " with the IFSC Code as : " +ifscCode);
     }
 
     @Override

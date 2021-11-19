@@ -4,15 +4,15 @@ public class StateBank extends Bank{
 
     public static void main(String[] args) {
         StateBank stateBank = new StateBank();
-        name = "State Bank";
-        ifscCode = "sb86hsk7";
+        stateBank.bankName = "State Bank";
+        stateBank.ifscCode = "sb86hsk7";
         stateBank.displayBankDetails();
         stateBank.denominationListInTheBank();
     }
 
     @Override
     void displayBankDetails() {
-        System.out.println( name+ "'s IFSC Code is : " +ifscCode);
+        System.out.println( bankName+ "'s IFSC Code is : " +ifscCode);
     }
 
     @Override

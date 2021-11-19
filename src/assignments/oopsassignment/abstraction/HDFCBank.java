@@ -5,8 +5,8 @@ public class HDFCBank extends Bank{
 
     public static void main(String[] args) {
         HDFCBank hdfcBank = new HDFCBank();
-        name = "HDFC Bank";
-        ifscCode = "a1b2c3";
+        hdfcBank.bankName = "HDFC Bank";
+        hdfcBank.ifscCode = "a1b2c3";
         hdfcBank.displayBankDetails();
         hdfcBank.denominationListInTheBank();
     }
