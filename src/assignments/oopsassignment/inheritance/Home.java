@@ -1,14 +1,21 @@
 package assignments.oopsassignment.inheritance;
 
 public class Home {
-    static int numberOfLights;
-    static String roomName;
+    public void noOfLights(String roomName, int numberOfLights) {
+        System.out.println("\nThe " + roomName + " has " + numberOfLights + " lights.\n");
+    }
 
     public static void main(String[] args) {
-        numberOfLights=5;
-        noOfLights();
-    }
-    static void noOfLights(){
-        System.out.println("Number of lights in the Home is : " +numberOfLights);
+
+        Bedroom bedroom = new Bedroom();
+        bedroom.noOfLights();
+
+        GuestRoom guestRoom = new GuestRoom();
+        guestRoom.noOfLights();
+
+        LivingRoom livingRoom = new LivingRoom();
+        livingRoom.welcomeMessage();
+        livingRoom.noOfLights();
+
     }
 }

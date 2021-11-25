@@ -28,7 +28,7 @@ public class Polymorphism {
         }
     }
 
-    //example of method overriding (same method name and arguments but child class behaviour will be different) - runtime polymorphism
+    //example of operator overloading (same method name and arguments but child class behaviour will be different) - runtime polymorphism
     void operatorOverloading(String input1, String input2) {
         Double sum =  Double.parseDouble(input1) + Double.parseDouble(input2);
         System.out.println("The sum is : " + new BigDecimal(sum).toPlainString());

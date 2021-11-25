@@ -1,10 +1,12 @@
 package assignments.oopsassignment.abstraction;
 
-import java.util.List;
 
 public abstract class Bank {
-     String bankName;
-     String ifscCode;
+
+    //declare non-static variables and abstract methods for implementation
+
+    String bankName;
+    String ifscCode;
 
     abstract void displayBankDetails();
     abstract void denominationListInTheBank();
